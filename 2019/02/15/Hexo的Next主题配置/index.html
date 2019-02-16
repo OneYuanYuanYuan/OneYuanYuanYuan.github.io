@@ -21,6 +21,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -74,7 +85,7 @@
     root: '/',
     scheme: 'Pisces',
     version: '7.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -97,13 +108,14 @@
 
 
   <meta name="description" content="下载主题 下载next主题进入博客下的./themes文件夹，使用git clone下载主题1git clone https://github.com/theme-next/hexo-theme-next.git hexo-theme-next">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo的Next主题配置">
 <meta property="og:url" content="http://yoursite.com/2019/02/15/Hexo的Next主题配置/index.html">
 <meta property="og:site_name" content="Hao">
 <meta property="og:description" content="下载主题 下载next主题进入博客下的./themes文件夹，使用git clone下载主题1git clone https://github.com/theme-next/hexo-theme-next.git hexo-theme-next">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-16T05:24:55.699Z">
+<meta property="og:updated_time" content="2019-02-16T08:58:59.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的Next主题配置">
 <meta name="twitter:description" content="下载主题 下载next主题进入博客下的./themes文件夹，使用git clone下载主题1git clone https://github.com/theme-next/hexo-theme-next.git hexo-theme-next">
@@ -428,11 +440,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-02-16 13:24:55" itemprop="dateModified" datetime="2019-02-16T13:24:55+08:00">2019-02-16</time>
+                <time title="修改时间：2019-02-16 16:58:59" itemprop="dateModified" datetime="2019-02-16T16:58:59+08:00">2019-02-16</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -463,6 +493,10 @@
              阅读次数： 
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
+			
+			<span class="post-meta-divider">|</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 4.7k</span>
+
           
 
           
@@ -539,7 +573,49 @@
 <p>将微信和支付宝的收款码图片放在\themes\next\source\images目录下，修改主题配置文件。找到reward, 修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">reward:</span><br><span class="line">  enable: true</span><br><span class="line">  comment: 谢谢阅读！</span><br><span class="line">  wechatpay: /images/wechat-reward-image.jpg</span><br><span class="line">  alipay: /images/alipay-reward-image.jpg</span><br><span class="line">  #bitcoin: /images/bitcoin.jpg</span><br></pre></td></tr></table></figure></p>
 <h3 id="16-站点建立时间"><a href="#16-站点建立时间" class="headerlink" title="16. 站点建立时间"></a>16. 站点建立时间</h3><p>这个时间将在站点的底部显示，例如 © 2013 - 2015。 编辑 主题配置文件，新增字段 since。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">配置示例</span><br><span class="line">since: 2013</span><br></pre></td></tr></table></figure></p>
 <h3 id="17-去掉文章目录标题的自动编号"><a href="#17-去掉文章目录标题的自动编号" class="headerlink" title="17. 去掉文章目录标题的自动编号"></a>17. 去掉文章目录标题的自动编号</h3><p>但是默认的主题会给文章标题带上编号，去掉方法如下：<br>打开主题配置文件，找到<br>将number改为false即可</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="==注意=="></a>==注意==</h3><h4 id="1-如果发现本机已经调试过的页面，发布后，在xxx-github-io上没有变化，可尝试删除-deploy-git文件夹，再hexo-d重新部署。"><a href="#1-如果发现本机已经调试过的页面，发布后，在xxx-github-io上没有变化，可尝试删除-deploy-git文件夹，再hexo-d重新部署。" class="headerlink" title="1. 如果发现本机已经调试过的页面，发布后，在xxx.github.io上没有变化，可尝试删除.deploy_git文件夹，再hexo d重新部署。"></a>1. 如果发现本机已经调试过的页面，发布后，在xxx.github.io上没有变化，可尝试删除.deploy_git文件夹，再hexo d重新部署。</h4><h3 id="n-去掉文章目录标题的自动编号"><a href="#n-去掉文章目录标题的自动编号" class="headerlink" title="n. ==去掉文章目录标题的自动编号=="></a>n. ==去掉文章目录标题的自动编号==</h3><p>我们自己写文章的时候一般都会自己带上标题编号，但是默认的主题会给我们带上编号，很是别扭，如何去掉呢？<br>打开主题配置文件，toc下的number修改为false</p>
+<h3 id="18-文章加密访问"><a href="#18-文章加密访问" class="headerlink" title="18. 文章加密访问"></a>18. 文章加密访问</h3><p>打开 themes/*/layout/_partials/head/head.swig文件,在<meta>之后插入代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (function()&#123;</span><br><span class="line">        if(&apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123;</span><br><span class="line">            if (prompt(&apos;请输入密码&apos;) !== &apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123;</span><br><span class="line">                alert(&apos;密码错误&apos;);</span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">写文章时加上password: *：</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">title: 2018</span><br><span class="line">date: 2018-10-25 16:10:03</span><br><span class="line">password: 123456</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h3 id="19-Hexo-Next背景动画"><a href="#19-Hexo-Next背景动画" class="headerlink" title="19. Hexo Next背景动画"></a>19. Hexo Next背景动画</h3><ol>
+<li><p>打开Git进入自己文件夹下/themes/next文件夹下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd themes/next</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行git clone <a href="https://github.com/theme-next/theme-next-canvas-nest" target="_blank" rel="noopener">https://github.com/theme-next/theme-next-canvas-nest</a> source/lib/canvas-nest即:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/theme-next/theme-next-canvas-nest source/lib/canvas-nest</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入 thems/next/_config.yml文件下修改 canvas_nest: true(注意: 冒号后面要空格)</p>
+</li>
+</ol>
+<h3 id="20-鼠标点击效果"><a href="#20-鼠标点击效果" class="headerlink" title="20. 鼠标点击效果"></a>20. 鼠标点击效果</h3><h5 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h5><p>在/themes/*/source/js/src下新建文件click.js，接着把以下粘贴到click.js文件中。<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure></p>
+<p>在\themes*\layout_layout.swig文件末尾添加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h5 id="点击爆炸效果"><a href="#点击爆炸效果" class="headerlink" title="点击爆炸效果"></a>点击爆炸效果</h5><p>首先在themes*\source\js 里面建一个叫fireworks.js的文件，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;use strict&quot;;function updateCoords(e)&#123;pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a=&#123;&#125;;return a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a=&#123;&#125;;return a.x=e,a.y=t,a.color=&quot;#F00&quot;,a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=function()&#123;ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1&#125;,a&#125;function renderParticule(e)&#123;for(var t=0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n=this,i=arguments;clearTimeout(a),a=setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl=document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx=canvasEl.getContext(&quot;2d&quot;),numberOfParticules=30,pointerX=0,pointerY=0,tap=&quot;mousedown&quot;,colors=[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize=debounce(function()&#123;canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+&quot;px&quot;,canvasEl.style.height=window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render=anime(&#123;duration:1/0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!==e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!==e.target.id&amp;&amp;&quot;A&quot;!==e.target.nodeName&amp;&amp;&quot;IMG&quot;!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;&quot;use strict&quot;;function updateCoords(e)&#123;pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top&#125;function setParticuleDirection(e)&#123;var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return&#123;x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)&#125;&#125;function createParticule(e,t)&#123;var a=&#123;&#125;;return a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function()&#123;ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()&#125;,a&#125;function createCircle(e,t)&#123;var a=&#123;&#125;;return a.x=e,a.y=t,a.color=&quot;#F00&quot;,a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=function()&#123;ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1&#125;,a&#125;function renderParticule(e)&#123;for(var t=0;t&lt;e.animatables.length;t++)&#123;e.animatables[t].target.draw()&#125;&#125;function animateParticules(e,t)&#123;for(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++)&#123;n.push(createParticule(e,t))&#125;anime.timeline().add(&#123;targets:n,x:function(e)&#123;return e.endPos.x&#125;,y:function(e)&#123;return e.endPos.y&#125;,radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule&#125;).add(&#123;targets:a,radius:anime.random(80,160),lineWidth:0,alpha:&#123;value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)&#125;,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0&#125;)&#125;function debounce(e,t)&#123;var a;return function()&#123;var n=this,i=arguments;clearTimeout(a),a=setTimeout(function()&#123;e.apply(n,i)&#125;,t)&#125;&#125;var canvasEl=document.querySelector(&quot;.fireworks&quot;);if(canvasEl)&#123;var ctx=canvasEl.getContext(&quot;2d&quot;),numberOfParticules=30,pointerX=0,pointerY=0,tap=&quot;mousedown&quot;,colors=[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize=debounce(function()&#123;canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+&quot;px&quot;,canvasEl.style.height=window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)&#125;,500),render=anime(&#123;duration:1/0,update:function()&#123;ctx.clearRect(0,0,canvasEl.width,canvasEl.height)&#125;&#125;);document.addEventListener(tap,function(e)&#123;&quot;sidebar&quot;!==e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!==e.target.id&amp;&amp;&quot;A&quot;!==e.target.nodeName&amp;&amp;&quot;IMG&quot;!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))&#125;,!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>在\themes*\layout\includes footer.swig文件中添加如下代码，自己想放那也可以放那里。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.fireworks %&#125;</span><br><span class="line">    &lt;canvas class=&quot;fireworks&quot; style=&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;/canvas&gt; </span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;&gt;&lt;/script&gt; </span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/fireworks.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &#123;% endif %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>打开主题配置文件_config.yml，在里面最后写下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Fireworks  点击爆炸效果</span><br><span class="line">fireworks: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="21-领养可爱妹子"><a href="#21-领养可爱妹子" class="headerlink" title="21. 领养可爱妹子"></a>21. 领养可爱妹子</h3><p>安装模块:<br>博客根目录选择cmd命令窗口或者git bash 输入以下代码，安装插件</p>
+<p>操作：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></p>
+<p>下载模型<br>作者动画展示网站<a href="https://huaji8.top/post/live2d-plugin-2.0/" target="_blank" rel="noopener">https://huaji8.top/post/live2d-plugin-2.0/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">live2d-widget-model-chitose</span><br><span class="line">live2d-widget-model-epsilon2_1</span><br><span class="line">live2d-widget-model-gf</span><br><span class="line">live2d-widget-model-haru/01 (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)</span><br><span class="line">live2d-widget-model-haruto</span><br><span class="line">live2d-widget-model-hibiki</span><br><span class="line">live2d-widget-model-hijiki</span><br><span class="line">live2d-widget-model-izumi</span><br><span class="line">live2d-widget-model-koharu</span><br><span class="line">live2d-widget-model-miku</span><br><span class="line">live2d-widget-model-ni-j</span><br><span class="line">live2d-widget-model-nico</span><br><span class="line">live2d-widget-model-nietzsche</span><br><span class="line">live2d-widget-model-nipsilon</span><br><span class="line">live2d-widget-model-nito</span><br><span class="line">live2d-widget-model-shizuku</span><br><span class="line">live2d-widget-model-tororo</span><br><span class="line">live2d-widget-model-tsumiki</span><br><span class="line">live2d-widget-model-unitychan</span><br><span class="line">live2d-widget-model-wanko</span><br><span class="line">live2d-widget-model-z16</span><br></pre></td></tr></table></figure>
+<p>选好对应的模型，使用 npm install 模型的包名来安装</p>
+<p>比如我选择的的是live2d-widget-model-hijiki 模型包</p>
+<p>在hexo博客根目录选择cmd命令窗口或者git bash 输入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-hijiki</span><br></pre></td></tr></table></figure></p>
+<p>执行安装就完事了</p>
+<p>配置<br>请向Hexo的 _config.yml 文件添加配置.</p>
+<p>操作：<br>打开个人Hexo博客文件根目录下的 _config.yml 文件，在最后添加一下代码<br>示例:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: false</span><br><span class="line">  debug: false</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-hijiki</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: true</span><br></pre></td></tr></table></figure></p>
+<p>插件部署与应用就完成了，接下来就是部署hexo博客和个人主页</p>
+<h3 id="22-字数统计和阅读时长"><a href="#22-字数统计和阅读时长" class="headerlink" title="22. 字数统计和阅读时长"></a>22. 字数统计和阅读时长</h3><ol>
+<li>安装 hexo-wordcount<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-wordcount</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>先安装插件。</p>
+<p>post添加<br>打开hexo\themes\hexo-theme-next\layout\macro路径下的post.swig文件，找到这段代码后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %&#125;</span><br><span class="line">    &lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;post-meta-item-icon&quot;</span><br><span class="line">    &#123;% if not theme.post_meta.item_text %&#125; title=&quot;&#123;&#123; __(&apos;post.views&apos;) &#125;&#125;&quot; &#123;% endif %&#125;&gt;</span><br><span class="line">    &lt;i class=&quot;fa fa-&#123;&#123; theme.busuanzi_count.post_views_icon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &#123;% if theme.post_meta.item_text %&#125; &#123;&#123;__(&apos;post.views&apos;) + __(&apos;symbol.colon&apos;) &#125;&#125; &#123;% endif %&#125;</span><br><span class="line">    &lt;span class=&quot;busuanzi-value&quot; id=&quot;busuanzi_value_page_pv&quot; &gt;&lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在endif上面，即本文代码块那个空行处添加以下代码</span><br><span class="line"></span><br><span class="line">&lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">&lt;span title=&quot;&#123;&#123;__(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;&lt;span class=&quot;post-meta-item-icon&quot;&gt;&lt;i class=&quot;fa fa-file-word-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;字数： &#123;&#123; wordcount(post.content) &#125;&#125;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="23-显示当前浏览进度"><a href="#23-显示当前浏览进度" class="headerlink" title="23. 显示当前浏览进度"></a>23. 显示当前浏览进度</h3><p>修改themes/*/_config.yml，把 false 改为 true：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">b2t: true</span><br><span class="line"></span><br><span class="line"># Scroll percent label in b2t button</span><br><span class="line">scrollpercent: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="24-置顶文章"><a href="#24-置顶文章" class="headerlink" title="24. 置顶文章"></a>24. 置顶文章</h3><p>安装支持插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-helper-post-top --save</span><br></pre></td></tr></table></figure></p>
+<p>之后在需要置顶文章的 front-matter中，添加 top: true 即可置顶。</p>
+<h3 id="25-代码区copy功能"><a href="#25-代码区copy功能" class="headerlink" title="25. 代码区copy功能"></a>25. 代码区copy功能</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[参考](https://www.jianshu.com/p/3e9d614c1e77)</span><br></pre></td></tr></table></figure>
+<p>#####<br>添加文章末尾版权声明<br>找到post.swig文件，在footer.post-footer中添加如下代码。</p>
+<p>copy时去掉和<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer class=&quot;post-footer&quot;&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div class=&quot;copyright&quot; style=&quot;clear:both;&quot;&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;本文标题:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot;&gt;&#123;&#123; post.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;文章作者:&lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;访问 &#123;&#123; theme.author &#125;&#125; 的个人博客&quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;发布时间:&lt;/span&gt;&#123;&#123; post.date.format(&quot;YYYY年M月D日 - HH时MM分&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;本文字数:&lt;/span&gt;&lt;span class=&quot;page-count&quot;&gt;本文一共有&#123;&#123; wordcount(page.content) &#125;&#125;字&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;原始链接:&lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot; title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;&#123;&#123; post.permalink &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;许可协议:&lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt; &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-nc/4.0/&quot; title=&quot;Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)&quot;&gt;Attribution-NonCommercial 4.0&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">           &lt;p&gt;&lt;span&gt;转载请保留以上信息。&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure></p>
+<p>然后需要修改一下样式，找到posts.styl,加入如下样式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.post-footer .copyright&#123;</span><br><span class="line">  padding-top: 1.5em;</span><br><span class="line">  padding-left: 1em;</span><br><span class="line">  font-size: 12px;</span><br><span class="line">  line-height: 1em;</span><br><span class="line">  border:1px solid #ccc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="==注意=="></a>==注意==</h3><h4 id="1-如果发现本机已经调试过的页面，发布后，在xxx-github-io上没有变化，可尝试删除-deploy-git文件夹-使用hexo-d重新部署"><a href="#1-如果发现本机已经调试过的页面，发布后，在xxx-github-io上没有变化，可尝试删除-deploy-git文件夹-使用hexo-d重新部署" class="headerlink" title="1. 如果发现本机已经调试过的页面，发布后，在xxx.github.io上没有变化，可尝试删除.deploy_git文件夹, 使用hexo d重新部署"></a>1. 如果发现本机已经调试过的页面，发布后，在xxx.github.io上没有变化，可尝试删除.deploy_git文件夹, 使用hexo d重新部署</h4><p>如果只是本机的配置修改后，没有更新，则重新生成hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<h3 id="n-去掉文章目录标题的自动编号"><a href="#n-去掉文章目录标题的自动编号" class="headerlink" title="n. ==去掉文章目录标题的自动编号=="></a>n. ==去掉文章目录标题的自动编号==</h3><p>我们自己写文章的时候一般都会自己带上标题编号，但是默认的主题会给我们带上编号，很是别扭，如何去掉呢？<br>打开主题配置文件，toc下的number修改为false</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Table Of Contents in the Sidebar</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: true</span><br><span class="line">  # If true, all words will placed on next lines if header width longer then sidebar width.</span><br><span class="line">  wrap: false</span><br><span class="line">  # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` var.</span><br><span class="line">  max_depth: 6</span><br></pre></td></tr></table></figure>
 <h3 id="n-修改文章内链接文本样式"><a href="#n-修改文章内链接文本样式" class="headerlink" title="n. ==修改文章内链接文本样式=="></a>n. ==修改文章内链接文本样式==</h3><p>打开文件 themes/next/source/css/_common/components/post/post.styl，在末尾添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.post-body p a &#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  border-bottom: 1px solid #0593d3;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423;</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>其中选择 .post-body 是为了不影响标题，选择 p 是为了不影响首页“阅读全文”的显示样式,颜色可以自己定义。</p>
@@ -592,6 +668,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
       
 
       
@@ -691,7 +773,37 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -724,7 +836,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载主题"><span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-头像设置"><span class="nav-text">1. ==头像设置==</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#TBD"><span class="nav-text">TBD</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2-网站logo设置"><span class="nav-text">2. ==网站logo设置==</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#TBD-1"><span class="nav-text">TBD</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-侧栏设置"><span class="nav-text">3. ==侧栏设置==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改语言"><span class="nav-text">4. 修改语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-设置RSS"><span class="nav-text">==5. 设置RSS==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-添加分类模块"><span class="nav-text">6. 添加分类模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-添加搜索功能"><span class="nav-text">7. 添加搜索功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-添加阅读全文按钮"><span class="nav-text">8. 添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-设置网站缩略图标"><span class="nav-text">9. 设置网站缩略图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-设置文章字体的颜色、大小"><span class="nav-text">10. 设置文章字体的颜色、大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-设置文字居中"><span class="nav-text">11. 设置文字居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-添加评论系统"><span class="nav-text">12. 添加评论系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-添加文章访问计数"><span class="nav-text">13. 添加文章访问计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-添加站点访问计数"><span class="nav-text">14. 添加站点访问计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-分享服务-异常，功能未实现"><span class="nav-text">15. 分享服务 ==异常，功能未实现==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-给next主题添加打赏"><span class="nav-text">16. 给next主题添加打赏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-站点建立时间"><span class="nav-text">16. 站点建立时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-去掉文章目录标题的自动编号"><span class="nav-text">17. 去掉文章目录标题的自动编号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-text">==注意==</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如果发现本机已经调试过的页面，发布后，在xxx-github-io上没有变化，可尝试删除-deploy-git文件夹，再hexo-d重新部署。"><span class="nav-text">1. 如果发现本机已经调试过的页面，发布后，在xxx.github.io上没有变化，可尝试删除.deploy_git文件夹，再hexo d重新部署。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-去掉文章目录标题的自动编号"><span class="nav-text">n. ==去掉文章目录标题的自动编号==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-修改文章内链接文本样式"><span class="nav-text">n. ==修改文章内链接文本样式==</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载主题"><span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-头像设置"><span class="nav-text">1. ==头像设置==</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#TBD"><span class="nav-text">TBD</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#2-网站logo设置"><span class="nav-text">2. ==网站logo设置==</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#TBD-1"><span class="nav-text">TBD</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-侧栏设置"><span class="nav-text">3. ==侧栏设置==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改语言"><span class="nav-text">4. 修改语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-设置RSS"><span class="nav-text">==5. 设置RSS==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-添加分类模块"><span class="nav-text">6. 添加分类模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-添加搜索功能"><span class="nav-text">7. 添加搜索功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-添加阅读全文按钮"><span class="nav-text">8. 添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-设置网站缩略图标"><span class="nav-text">9. 设置网站缩略图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-设置文章字体的颜色、大小"><span class="nav-text">10. 设置文章字体的颜色、大小</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-设置文字居中"><span class="nav-text">11. 设置文字居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-添加评论系统"><span class="nav-text">12. 添加评论系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-添加文章访问计数"><span class="nav-text">13. 添加文章访问计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-添加站点访问计数"><span class="nav-text">14. 添加站点访问计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-分享服务-异常，功能未实现"><span class="nav-text">15. 分享服务 ==异常，功能未实现==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-给next主题添加打赏"><span class="nav-text">16. 给next主题添加打赏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-站点建立时间"><span class="nav-text">16. 站点建立时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-去掉文章目录标题的自动编号"><span class="nav-text">17. 去掉文章目录标题的自动编号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-文章加密访问"><span class="nav-text">18. 文章加密访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-Hexo-Next背景动画"><span class="nav-text">19. Hexo Next背景动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-鼠标点击效果"><span class="nav-text">20. 鼠标点击效果</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#实现点击出现桃心效果"><span class="nav-text">实现点击出现桃心效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#点击爆炸效果"><span class="nav-text">点击爆炸效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-领养可爱妹子"><span class="nav-text">21. 领养可爱妹子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-字数统计和阅读时长"><span class="nav-text">22. 字数统计和阅读时长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-显示当前浏览进度"><span class="nav-text">23. 显示当前浏览进度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-置顶文章"><span class="nav-text">24. 置顶文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-代码区copy功能"><span class="nav-text">25. 代码区copy功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意"><span class="nav-text">==注意==</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如果发现本机已经调试过的页面，发布后，在xxx-github-io上没有变化，可尝试删除-deploy-git文件夹-使用hexo-d重新部署"><span class="nav-text">1. 如果发现本机已经调试过的页面，发布后，在xxx.github.io上没有变化，可尝试删除.deploy_git文件夹, 使用hexo d重新部署</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-去掉文章目录标题的自动编号"><span class="nav-text">n. ==去掉文章目录标题的自动编号==</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#n-修改文章内链接文本样式"><span class="nav-text">n. ==修改文章内链接文本样式==</span></a></li></div>
             
 
           </div>
@@ -732,6 +844,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -812,11 +931,6 @@
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
 
     
 
@@ -845,6 +959,12 @@
 
 
 
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
 
@@ -1286,5 +1406,22 @@
 
   
 
-</body>
+  
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
+
+
+<!-- 页面点击小红心 -->
+
+
+  <!-- 页面点击fireworks -->
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+  
+
