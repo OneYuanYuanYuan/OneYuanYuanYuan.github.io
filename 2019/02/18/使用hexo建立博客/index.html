@@ -107,21 +107,24 @@
 
 
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test0">
-<meta property="og:url" content="http://yoursite.com/2019/02/15/test0/index.html">
+  <meta name="description" content="使用Hexo在GitHub上搭建个人博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo建立博客">
+<meta property="og:url" content="http://yoursite.com/2019/02/18/使用hexo建立博客/index.html">
 <meta property="og:site_name" content="Hao">
+<meta property="og:description" content="使用Hexo在GitHub上搭建个人博客">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-15T06:19:05.970Z">
+<meta property="og:updated_time" content="2019-02-18T01:33:38.413Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test0">
+<meta name="twitter:title" content="使用hexo建立博客">
+<meta name="twitter:description" content="使用Hexo在GitHub上搭建个人博客">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/15/test0/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/18/使用hexo建立博客/">
 
 
 
@@ -131,7 +134,7 @@
   };
 </script>
 
-  <title>test0 | Hao</title>
+  <title>使用hexo建立博客 | Hao</title>
   
 
 
@@ -376,7 +379,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/15/test0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/使用hexo建立博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hao">
@@ -393,7 +396,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test0
+          <h1 class="post-title" itemprop="name headline">使用hexo建立博客
 
               
             
@@ -419,12 +422,34 @@
                 
               
 
-              <time title="创建时间：2019-02-15 14:19:05" itemprop="dateCreated datePublished" datetime="2019-02-15T14:19:05+08:00">2019-02-15</time>
+              <time title="创建时间：2019-02-18 09:07:24 / 修改时间：09:33:38" itemprop="dateCreated datePublished" datetime="2019-02-18T09:07:24+08:00">2019-02-18</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -438,8 +463,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/02/15/test0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/15/test0/" itemprop="commentCount"></span>
+                <a href="/2019/02/18/使用hexo建立博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/18/使用hexo建立博客/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -457,7 +482,7 @@
             </span>
 			
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 0</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 576</span>
 
           
 
@@ -478,7 +503,50 @@
       
 
       
-        
+        <!-- 标签别名 -->
+<blockquote class="blockquote-center"><p>使用Hexo在GitHub上搭建个人博客</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">参考</span><br><span class="line">https://hexo.io/zh-cn/</span><br></pre></td></tr></table></figure>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><p>安装git<br>安装Node.js</p>
+<p>下来只需要使用 npm 即可完成 Hexo 的安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-新建一个网站"><a href="#2-新建一个网站" class="headerlink" title="2. 新建一个网站"></a>2. 新建一个网站</h2><ol>
+<li>init<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init [folder]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
+<ol start="2">
+<li>new<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<ol start="3">
+<li>generate<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>生成静态文件。</p>
+<p>选项    描述<br>-d, –deploy    文件生成后立即部署网站<br>-w, –watch    监视文件变动<br>该命令可以简写为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>publish</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>发表草稿。只有当新建的文章是草稿时，才需要使用</p>
+<p>使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
+<p>新建文章时，默认的default_layout参数是post，因此可以不使用此命令。<br>如果参数是draft，或者<br><figure class="highlight plain"><figcaption><span>new draft <title> ```</title></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">则需要先publish。</span><br><span class="line">参考：&#123;% post_link 使用hexo新建文章 %&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">5. server</span><br></pre></td></tr></table></figure></p>
+<p>hexo server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">启动服务器。默认情况下，访问网址为： http://localhost:4000/。</span><br><span class="line"></span><br><span class="line">如果您想要更改端口，或是在执行时遇到了 EADDRINUSE 错误，可以在执行时使用 -p 选项指定其他端口，如下：</span><br></pre></td></tr></table></figure></p>
+<p>hexo server -p 5000<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">6. clean</span><br></pre></td></tr></table></figure></p>
+<p>hexo clean<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span><br><span class="line"></span><br><span class="line">在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 3. 发布到github</span><br><span class="line"></span><br><span class="line">### 配置</span><br><span class="line"></span><br><span class="line">1. 先修改&apos;_config.yml&apos;配置文件，下面是一个示例</span><br><span class="line"></span><br><span class="line">```yml</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/xxx/xxx.github.io.git</span><br></pre></td></tr></table></figure></p>
+<p>这里需要在github里的个人账户下，新建一个与账户名同名的仓库xxx.github.io。这里的xxx必须与账户名一致。</p>
+<ol start="2">
+<li>安装自动发布的插件</li>
+</ol>
+<p>安装 hexo-deployer-git。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>以上2条命令都可以，发布可能有延时，稍等即可。</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>您可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --deploy</span><br><span class="line">hexo deploy --generate</span><br><span class="line"></span><br><span class="line"># 简写</span><br><span class="line"># 上面两个命令可以简写为</span><br><span class="line">hexo g -d</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -537,8 +605,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/15/test/" rel="next" title="test">
-                <i class="fa fa-chevron-left"></i> test
+              <a href="/2019/02/17/使用hexo新建文章/" rel="next" title="使用hexo新建文章">
+                <i class="fa fa-chevron-left"></i> 使用hexo新建文章
               </a>
             
           </div>
@@ -547,8 +615,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/15/Hexo的Next主题配置/" rel="prev" title="Hexo的Next主题配置">
-                Hexo的Next主题配置 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/18/使用hexo写博客/" rel="prev" title="使用hexo写博客">
+                使用hexo写博客 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -598,8 +666,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -614,7 +691,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -673,6 +750,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装"><span class="nav-text">1. 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-新建一个网站"><span class="nav-text">2. 新建一个网站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-text">部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
