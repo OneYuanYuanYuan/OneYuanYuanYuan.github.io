@@ -23,3 +23,8 @@ test cmd0
 test powershell
 
 
+
+
+
+new computer teset
+
