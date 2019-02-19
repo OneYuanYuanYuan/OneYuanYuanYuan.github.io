@@ -23,8 +23,18 @@ test cmd0
 test powershell
 
 
+<<<<<<< HEAD
 
 
 
 new computer teset
+
+=======
+new computer test
+
+update test
+
+
+
+
 
