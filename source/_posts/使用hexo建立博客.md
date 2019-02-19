@@ -21,8 +21,8 @@ https://hexo.io/zh-cn/
 
 ## 1. 安装
 
-安装git
-安装Node.js
+安装[git](https://git-scm.com/download/win)
+安装[Node.js](https://nodejs.org/en/)
 
 下来只需要使用 npm 即可完成 Hexo 的安装。
 ```

@@ -23,3 +23,6 @@ test cmd0
 test powershell
 
 
+new computer test
+
+update test
